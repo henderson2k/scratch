@@ -1,0 +1,28 @@
+Boot Time:
+SystemInfo /s ASSET | find "Boot Time:"
+
+Logged on user:
+WMIC /NODE:ASSET COMPUTERSYSTEM GET USERNAME
+
+Installed Software
+wmic /node:ASSET product get name, version, vendor
+
+Gpupdate
+WMIC /node:ASSET process call create "cmd.exe /c GPUpdate.exe"
+
+Uninstall Program and where 'name like'
+wmic /node:m01249 product where name="Google Chrome" call uninstall /nointeractive
+
+wmic /node:nhsl33618 product where "name like 'Google%'" call uninstall /nointeractive
+
+Powershell: Find string (Asset) in current directory (inc. all subdirectories)
+Get-ChildItem -Recurse | Select-String "Asset" -List | Select Path
+
+List sessions on remote server
+QWINSTA /server:hrm-adr-02
+
+remote hd space
+WMIC /Node:m10613 LogicalDisk Where DriveType="3" Get DeviceID,FileSystem,FreeSpace,Size
+
+Remove session (ID) on remote server
+RWINSTA 6 /server:hrm-adr-02 WMIC /node:D07903 /USER:"nhsl\hendersonand_admin" process call create "cmd.exe /c c:\VFPOLEDBSetup.msi /quiet" Copy to windows/system32 folder as this is where things run from ? Get-ChildItem -Recurse | Select-String "Asset" -List | Select Path wmic os get LocalDateTime wmic os get LastBootUpTime "{0:dd} days {0:hh\:mm\:ss} (hh:mm:ss)" -f (New-TimeSpan (Get-WmiObject win32_operatingsystem | select @{LABEL='LastBootUpTime';EXPRESSION={$_.ConverttoDateTime($_.lastbootuptime)}}).LastBootUpTime)
