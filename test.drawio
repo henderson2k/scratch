@@ -14,7 +14,7 @@
                     <mxGeometry x="160" y="50" width="120" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="7" value="Vertical Flow Layout" style="swimlane;startSize=20;horizontal=1;childLayout=flowLayout;flowOrientation=north;resizable=0;interRankCellSpacing=50;containerType=tree;" vertex="1" parent="1">
-                    <mxGeometry x="100" y="50" width="270" height="280" as="geometry"/>
+                    <mxGeometry x="220" y="30" width="270" height="280" as="geometry"/>
                 </mxCell>
                 <mxCell id="8" value="Start" style="whiteSpace=wrap;html=1;" vertex="1" parent="7">
                     <mxGeometry x="85" y="40" width="100" height="40" as="geometry"/>
