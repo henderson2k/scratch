@@ -9,6 +9,7 @@ graph TD;
 ```
 
 ```mermaid gantt
+
 dateFormat  YYYY-MM-DD
 title Adding GANTT diagram to mermaid
 
